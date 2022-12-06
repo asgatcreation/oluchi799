@@ -1,0 +1,552 @@
+\documentclass[unknownkeysallowed, compress]{beamer}
+\usetheme{JuanLesPins}%{JuanLesPins}%{CambridgeUS}%{Boadilla}%{Warsaw}%{Antibes}%{Berkeley}%{JuanLesPins}%{Frankfurt}%{CambridgeUS}%{boxes}%{Boadilla}%{Berlin}%{Berkeley}%{Bergen}%{Antibes}%{AnnArbor}%{Darmstadt}
+%\beamercolor{albatross}
+\usepackage{cancel}
+\usepackage{apacite}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{dsfont}
+\setbeamercovered{transparent}
+%\useoutertheme[subsection=false]{smoothbars}
+\useinnertheme{rectangles}
+
+\usepackage{multicol}
+
+\newtheorem{hypothesis}[theorem]{\textbf{Hypothesis}}
+
+\colorlet{mycolor}{orange!80!black}% change this color to suit your needs
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+\useinnertheme{rectangles}
+
+\hfuzz5pt
+\theoremstyle{plain}
+%\newtheorem{theorem}{\textbf{Theorem}}[section]
+%$$\newtheorem{lemma}[theorem]{\textbf{Lemma}}
+\newtheorem{proposition}[theorem]{\textbf{Proposition}}
+%\newtheorem{corollary}[theorem]{\textbf{Corollary}}
+%\newtheorem{claim}[theorem]{\textbf{Claim}}
+%\newtheorem{addendum}[theorem]{\textbf{Addendum}}
+%\newtheorem{definition}[theorem]{\textbf{Definition}}
+\newtheorem{remark}[theorem]{\textbf{Remark}}
+%\newtheorem{example}[theorem]{\textbf{Example}}
+%\newtheorem{conjecture}[theorem]{\textbf{Conjecture}}
+%\newtheorem{notation}[theorem]{\textbf{Notation}}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage[english]{babel}
+\addto{\captionsenglish}{%
+  \renewcommand{\bibname}{REFERENCES}
+	%\renewcommand{\tableofcontents}{Table of Contents}
+}
+
+%\AtBeginSection[]{
+%  \setbeamercolor{section in toc shaded}{use=structure,fg=structure.fg}
+ % \setbeamercolor{section in toc}{fg=mycolor}
+  %\setbeamercolor{subsection in toc shaded}{fg=black}
+  %\setbeamercolor{subsection in toc}{fg=mycolor}
+  %\setbeamercolor{subsubsection in toc shaded}{fg=black}
+  %\setbeamercolor{subsubsection in toc}{fg=mycolor}
+  %\frame<beamer>{\begin{multicols}{2}
+  %\frametitle{Table of Contents}
+  %\setcounter{tocdepth}{3}  
+  %\tableofcontents[
+   % sectionstyle=show/shaded,
+    %subsectionstyle=show/show/shaded,
+    %subsubsectionstyle=show/show/show/shaded
+%    ]
+%\end{multicols} 
+ %}
+%}
+
+\setcounter{tocdepth}{4}  
+%  \tableofcontents[
+ %   sectionstyle=show/shaded,
+  %  subsectionstyle=show/show/shaded,
+   % subsubsectionstyle=show/show/show/shaded
+%    ]
+
+
+\mode<presentation>{}
+%% preamble
+\title[ENWEREM, OLUCHI JANE 217274~~~APPROXIMATION OF SOLUTION OF STOCHASTIC FRACTIONAL D.E.]{APPROXIMATION OF SOLUTION OF STOCHASTIC FRACTIONAL DIFFERENTIAL EQUATIONS WITH NON-LIPSCHITZ  COEFFICIENTS}
+%\subtitle[short version]{A subtitle}
+\date[2022]{JANUARY, 2022}
+\author[ENWEREM, OLUCHI JANE 217274]{\textbf{ENWEREM, OLUCHI JANE\\
+MATRIC NO:217274}}
+\institute{\textbf{ An M.Sc. RESEARCH WORK SUBMITTED TO THE
+		DEPARTMENT OF MATHEMATICS, FACULTY OF SCIENCES,
+		UNIVERSITY OF IBADAN, IBADAN, NIGERIA.}\\
+\textbf{Supervisor: PROF. E.O. AYOOLA}}
+
+%\logo{
+%\includegraphics[width=1cm]{uilogo.jpg}
+%}
+
+%\usepackage{tikz}
+%\titlegraphic { 
+%\begin{tikzpicture}[overlay,remember picture]
+%\node[left=0.2cm] at (current page.30){
+%    \includegraphics[width=1cm]{uilogo.jpg}
+%};
+%\end{tikzpicture}
+%}
+
+% Logo only on title page
+%\titlegraphic{
+ %   \includegraphics[width=0.3cm]{uilogo.jpg}
+%}
+
+%%completed
+%\titlegraphic{
+ %   \includegraphics[width=0.5cm]{uilogo.jpg}
+%}
+
+%\AtBeginSection[]
+%{
+  %\begin{frame}<beamer>
+    %\frametitle{Outline for Chapter \thesection}
+    %\tableofcontents[currentsection]
+  %\end{frame}
+%}
+%\usetheme{texsx}
+
+\begin{document}
+\frame{\maketitle} % <-- generate frame with title
+%\chapter{INTRODUCTION}
+%\begin{frame}[allowframebreaks]{TABLE OF CONTENTS}
+%\tableofcontents 08161585300
+%\end{frame}
+\begin{frame}[allowframebreaks]{TABLE OF CONTENTS}
+%<beamer>{\begin{multicols}{2}
+\tableofcontents
+\end{frame}
+\section{GENERAL INTRODUCTION}
+\begin{frame}[allowframebreaks]{Background of Study}
+\par Stochastic differential equation (SDEs) have been greatly developed and are well known to model diverse  phenomena, including but not limited to flunctuating stock prices, physical systems subject to thermal flunctuations, forcasting the growth of a population.\\
+\par With the developing of stochastic analysis theory, many have began to study stochastic differential equations of the following forms:\\
+\par Let $(\Omega,\mathcal{F},\mathbb{P})$ be a complete probability space with filtration $\{\mathcal{F}_t\}_{t\geq 0}$ satisfying the usual conditions (i.e. it is right continuous and $\mathcal{F}_0$ contains all $\mathbb{P}$) null sets), and let $B(t)$ be a given $m-$ dimensional Brownian motion defined on the space. Let $0<T<\infty$ and $X_0$ be an $\mathcal{F}_0$-measurable $\mathbb{R}^d$-valued random variable such that $\mathbb{E}|X_0|^2<\infty$. Consider the $d-$dimensional differential equation
+\begin{equation}\label{new1.11}
+dX(t) = f(t,X(t))dt+g(t,X(t))dB(t)~~0\leq t\leq T
+\end{equation}
+with initial data $X_0$ where $f:[0,T]\times \mathbb{R}^d\longrightarrow \mathbb{R}^d$ and $g:[0,T]\times \mathbb{R}^d\longrightarrow \mathbb{R}^{d\times m}$ are both continuous and Borel measurable.\\
+ By definition of stochastic differential, this equation is equivalent to the following stochastic integral equation:
+ \begin{equation}\label{new1.12}
+     X(t) = X_0+\int_0^t f(s,X(s))ds+\int_0^tg(s,X(s))dB(s),~~~t\in[0,T]
+ \end{equation}
+\textbf{Sttochastic differential delay equation}\\
+Let $\tau>0$ and denote by $C([-\tau,0]:\mathbb{R}^d)$ the family of continuous functions $\phi$ from $[\tau,0]$ to $\mathbb{R}^d$ with the norm $||\phi|| = \sup_{-\tau\leq \theta\leq 0}|\phi(\theta)|$.\\
+Let $0<T<\infty$. We now consider the following stochastic differential delay operation in $\mathbb{R}^d$;
+\begin{equation}\label{new1.13}
+dX(t) = f(t,X(t), X(t-\tau))dt+g(t,X(t),X(t-\tau))dB(t)~~0\leq t\leq T
+\end{equation}
+where $f[0,T]\times\mathbb{R}^d\times\mathbb{R}^d\rightarrow \mathbb{R}^{d\times m}$ are both continuous and Borel measurable.\\
+This equation is equivalent to the integral
+\begin{equation}\label{new1.14}
+    X_t(t) = X(0)+\int_0^tf(s,X(s),X(s-\tau))ds+\int_0^tg(s,X(s), X(s-\tau))dB(s)
+\end{equation}
+%\noindent
+%\par On the other hand, for the potential applications in uncotonty problems, risk measures and the super hedging in finance, the theory of non-linear expectation has developed.\\
+Non-linear $G-$SDEs is of the form
+\begin{equation}\label{new1.15}
+dx(t) = f(x,x(t))dt+h(t,x(t))d(B)_t+g(t,x(t))dB_t
+\end{equation}
+where $B_t$ is one-dimensional $G$-Brownian motion, $(B)_t$ is the variation process of the $G$ - Brownian motion $B_t$.\\
+The integral form is
+\begin{equation}
+    x(t)-x(0)+\int_0^tf(s,x_\varepsilon(t))ds+\int_0^th(s,x(s))d(B)_s+\int_0^t g(s,x_\varepsilon(s))sB_s
+\end{equation}
+\par In this paper, we consider stochastic fractional differential equation of Ito - Doob type in the form
+\begin{equation}\label{newnewnew}
+\left\{
+\begin{split}
+dX(t) & = b(t,X(t))dt+\sigma_1(t,X(t))dW(t)+\sigma_2(t,X(t))(dt)^\alpha\\
+X(0)& = X_0\in\mathbb{R}^d
+\end{split}
+\right.
+\end{equation}
+where $t\in[0,T],~0<\alpha<1,b,\sigma_2\in C[[0,T]\times\mathbb{R}^+;\mathbb{R}^d]$ and $\sigma_1\in C[[0,T]\times \mathbb{R}^d;\mathbb{R^{d\times m}}]$, $w(t)$ is an m-dimensional Brownian motion defined on a complete probability space $(\Omega,\mathcal{F},P)$ and $X_0$ is $\mathbb{R}^d-$valued stochastic process such that
+\begin{equation}
+\mathbb{E}|X_0|^2<\infty
+\end{equation}
+Equation \eqref{newnewnew} is understood in the integral form, given by: % equivalent to the integral form
+$$
+X(t) = X(0)+\int_0^t\bigg((b(s,X(s))ds+\sigma_1(s,X(s))dw(s)+\sigma_2(s,X(s))(ds)^\alpha\bigg)
+$$
+where $(ds)^\alpha$ is the differential of order $\alpha$, since $\alpha\in(0,1)$.
+\end{frame}
+%\subsection{Background of the Study}
+%\begin{frame}[allowframebreaks]{Background of the Study}
+%\noindent
+%\par Stochastic differential equation (SDEs) have been greatly developed and are well known to model diverse  phenomena, including but not limited to flunctuating stock prices, physical systems subject to thermal flunctuations, forcasting the growth of a population.\\
+%\par With the developing of stochastic analysis theory, many have began to study stochastic differential equations.
+
+%\end{frame}
+
+\section{LITERATURE REVIEW}
+\begin{frame}[allowframebreaks]{LITERATURE REVIEW}
+In this project, we consider stochastic fractional differential equations (SFDEs) of
+It$\hat{\mbox{o}}$–Doob type in the following form:
+\begin{equation}\label{1.1}
+\left\{
+\begin{split}
+&dX(t) = b(t,X(t))dt+\sigma_1(t,X(t))dW(t)+\sigma_2(t,X(t))(dt)^\alpha,\\
+&X(0) = X_0\in\mathbb{R}^d,
+\end{split}
+\right.
+\end{equation}
+where $t\in[0,T],~0<\alpha<1,~b,\sigma_2\in C[[0,T]]\times \mathbb{R}^d;\mathbb{R}^d]$ and $\sigma_1\in C[[0,T]\times \mathbb{R}^d;\mathbb{R}^{d\times m}]$.\\
+$W(t)$ is an $m$-dimensional Brownian motion defined on a complete probability space $(\Omega,\mathcal{F},P)$ and $X_0$ is $\mathbb{R}^d$-value stochastic process such that $\mathbb{E}||X_0|^2<\infty.$\\
+
+\par The theory of SFDEs arises from ecological, epidemiological dynamics and many
+other areas giving rise to multi-time scale stochastic equations \cite{12}. \cite{12} have obtained the existence and uniqueness of solutions to \eqref{1.1}
+under Lipschitz and linear growth conditions when $\alpha\in(1/2,1)$  by using successive
+approximation. \cite{1} have established the existence, uniqueness and
+stability of solutions to equation \eqref{1.1} under \cite{26} non-Lipschitz and linear
+growth conditions by using Carath´eodory approximation.\\
+
+\par The approximation theorem as an averaging principle plays a crucial role to
+obtain approximation solutions to differential equations arising from mechanics,
+molecular dynamics, mathematics, material science, control, and other areas of sciences and engineering. Some rigorous results on the approximation theorem to the
+solutions of stochastic differential equations (SDEs) driven by Brownian noise date
+back to \cite{6},\cite{7}. The detail interpretation of the so-called approximation theorem is that the original system solutions can be approximated by the
+corresponding simplified system solutions both in the sense of mean square and
+also in probability \cite{16},\cite{8},\cite{1}. Recently, \cite{20} have established an approximation theorem for the solutions of SDEs driven by L´evy noise under Lipschitz
+and linear growth conditions. In particular, they have proved that the solutions
+to the simplified systems converge to that of the corresponding original systems
+both in the sense of mean square and probability. Similar results were proposed to
+the multivalued stochastic differential equations (MSDEs) by \cite{21}. Very recently, \cite{13} established the averaging principles for a class of stochastic partial
+differential equations (SPDEs) with slow component driven by fractional Brownian
+motion (fBm) and a fast one driven by a fast-varying diffusion. They in \cite{14} also
+obtained the averaging principles for SPDEs driven by a fBm with random delays
+modulated by two-timescale Markov switching processes. An averaging principles
+for MSDEs driven by Poisson point processes are established by \cite{3}.\\
+For further work on the approximation theorem as an averaging principle for SDEs
+under Lipschitz and linear growth conditions, we refer to \cite{19},\cite{23},\cite{22}.\\
+
+\par On the other hand, the non-Lipschitz condition is much weaker than Lipschitz
+one with wider range of applications which still guarantee the existence and uniqueness of solutions and there has been little work on the approximation theorem as an
+averaging principle under non-Lipschitz condition. Recently, \cite{17} initiated to study the approximation theorem to SDEs and stochastic differential delay
+equations driven by Brownian motion under Yamada’s non-Lipschitz and linear
+growth conditions. Similar results were proved for SDEs and stochastic functional
+differential equations with L´evy noise by \cite{24}. Very recently, \cite{25}
+have proved that the solutions of simplified SDEs driven by fBm converge to that
+of the original SDEs in the sense of mean square and probability under \cite{18} non-Lipschitz condition.\\
+
+%\par Based on the above brief discussion and to the author’s best knowledge, the
+%approximation theorem as an averaging principle for SFDEs \eqref{1.1} has not been
+%considered at all.
+\par  Therefore, in this research work we consider this issue under non-Lipschitz
+and weakened linear growth conditions by adopting Itˆo’s formula. We would like
+to mention that the non-Lipschitz conditions used in \cite{1},\cite{17} and the Lipschitz one
+used in \cite{12} are special cases of the proposed condition in this paper and the results
+are new for the approximation theorem even when the coefficients that appear in
+SFDEs \eqref{1.1} satisfy Lipschitz condition. Moreover, we will see that there is no need
+to use [\cite{25}, Hypothesis 2] to prove the existence and uniqueness of solutions to
+SFDEs \eqref{1.1}.
+
+\end{frame}
+
+\section{GENERAL THEORY: APPROXIMATION THEOREM}
+\begin{frame}{GENERAL THEORY: APPROXIMATION THEOREM}
+\noindent
+\par The averaging principle  plays on important role in dynamical systems in problems of mechanics, physics, control and many other areas. The rigorous results on averaging principle were first put forward by (Krylov and Bogolyubov, 1937). After that (Khasminskii, 1963) considered averaging principle of Ito's stochastiv differential equations, parabolic and elliptic differential equation. (Stoyanov and Bainov, 1974) investigated the averaging method for a class of stochastic differential equations with Poisson noise. They considered the connections between the solutions of a standard form and the solutions of averaged systems and proved that under some conditions the solutions of averaged systems converged to the solutions of original system in mean square and in probability.
+\end{frame}
+\subsection{Stochastic Differential Equation Case}
+\begin{frame}[allowframebreaks]{Stochastic Differential Equation Case}
+Let $(\omega,\mathcal{F},\mathbb{P})$ be a complete probability space with filtration $\{\mathcal{F}_t\}_{t\geq 0}$ satisfying the usual conditions (i.e., it is night continuous and $\mathcal{F}_0$ contains all $\mathbb{P}$ null sets), and let $B(t)$ be a given $m$-dimensional Brownian motion defined on the space. Let $0<T<\infty$ and $X_0$ be an $\mathcal{F}_0$-measurable $R^d$-valued random variable such that $\mathbb{E}|X_0|^2<\infty$.\\
+Consider the following $d$-dimensional stochastic differential equation
+\begin{equation}\label{3.1.1}
+dX(t) = f(t,X(t))dt+g(t,X(t))dB(t),~~~0\leq t\leq T
+\end{equation}
+with initial data $X_0$, where $f:[0,T]\times\mathbb{R}^d\rightarrow\mathbb{R}^d$ and $g:[0,T]\times\mathbb{R}^d\rightarrow\mathbb{R}^{d\times m}$ are both continuous  and Borel measurable. By the definition of stochastic differential, this equation is equivalent to the following stochastic integral equation:
+\begin{equation}\label{3.1.2}
+X(t) = X_0+\int_0^tf(s,X(s))ds+\int_0^tg(s,X(s))dB(s),~~t\in[0,T]
+\end{equation}
+In order to guarantee the existence and uniqueness of the solution tp \eqref{3.1.1}, we impose a condition on the coefficient function.\\
+
+(A1) Non - Liochitz condition. For any $x,y\in\mathbb{R}^d$ and $t\in[0,T]$,
+$$
+\bigg|f(t,x)-f(t,y)\bigg|^2V\bigg|g(t,x)-g(t,y)\bigg|^2\leq k(\bigg|x-y\bigg|^2)
+$$
+where $K(\cdot)$ is a continuous increasing concave function from $\mathbb{R}^+$ to $\mathbb{R}^+$ such that $K(0) = 0,~K(x)>0$ and $x>0$ and
+$$
+\int_{0+}\frac{dx}{k(x)} = \infty
+$$
+It is known from (Mao, 2007, theorem 6.5) that under the condition (A1) there exists a unique solution $X(t)$ to \eqref{3.1.1} with the initial data $X_0$.\\
+The standard form of \eqref{3.1.2} is
+
+\begin{equation}\label{3.1.3}
+X_\varepsilon(t) = X_0+\varepsilon\int_0^tf(s,X_\varepsilon(s))ds=\sqrt{\varepsilon}\int_0^t g(s,X_\varepsilon(s))dB(s)
+\end{equation}
+where $X_0$ and the coefficients are the same conditions as in \eqref{3.1.1} and $E\in(0,\varepsilon_0]$ is a positive small parameter with $\varepsilon_0$ a fixed number.\\
+\par According to the existence and uniqueness theorem of differential equations, \eqref{3.1.3} also has a unique solution $X_\varepsilon(t),~t\in[0,T]$ for every fixed $E\in(0,\varepsilon_0]$. In order to find out whether the solution $X_\varepsilon(t)$ will be approximated with small $\varepsilon$ to some other simpler process, we impose some conditions on the coeficients.\\
+Let $\bar{f}(x):\mathbb{R}^d\rightarrow\mathbb{R}^d,~~\bar{g}(x):\mathbb{R}^d\rightarrow\mathbb{R}^{d\times m}$ be measurable functions satisfying the non-lipchitz condition with respect to $x$ as $f(t,x)$ and $g(t,x)$.\\
+Moreover, we assume that the following inequalities are satisfied for $x\in\mathbb{R}^d$ and $T_1\in[0,T]$\\
+(A2)
+$$
+\frac{1}{T_1}\int_0^{T_1}|f(s,x)-\bar{f}(x)|ds\leq \psi_1(T_1)(1+|x|),
+$$
+(A3)
+$$
+\frac{1}{T_1}\int_0^{T_1}|g(s,x) - \bar{g}(x)|^2ds\leq \psi_2(T_1)(1+|x|^2),
+$$
+where $\psi_i(T_1), ~i = 1,2$ a positive bounded with $\lim_{T_1\rightarrow \infty}\psi_i(T_1) = 0$. We now consider the following averaged stochastic equation which corresponds to the original standard form \eqref{3.1.3}
+
+\begin{equation}\label{3.1.4}
+Y_\varepsilon(t) = X_0+\varepsilon\int_0^{t}\bar{g}(Y_\varepsilon(s))ds+\sqrt{\varepsilon}\int_0^t\bar{g}(Y_\varepsilon(s))dB(s)
+\end{equation}
+obviously \eqref{3.1.4} also has a unique solution $Y_\varepsilon(t)$ under similar condition as \eqref{3.1.3} for the solution $X_\varepsilon(t)$.
+\end{frame}
+\subsection{Stochastic Differential Delay Equation Case:}
+\begin{frame}[allowframbreaks]{Stochastic Differential Delay Equation Case}
+Let $\tau>0$ and denote $C([-\tau,0],\mathbb{R}^d)$ the family of continuous function $\phi$ from $[-\tau,0]$ to $\mathbb{R}^d$ with the norm $||\phi|| = \sup_{\tau\leq \theta\leq 0}|\phi(\theta)|$.\\
+Let $0<\tau<\infty$. We now consder the stochastic differential delay equation in $\mathbb{R}^dL$
+\begin{equation}\label{3.1.5}
+dX(t) = f(t,X(t)),~X((t-\tau))dt+g(t,X(t), X(t-\tau))dB(t), 0\leq t\leq \tau
+\end{equation}
+where $f:[0,\tau]\times \mathbb{R}^d\times\mathbb{R}^d\rightarrow \mathbb{R}^d$ and $g:[0,\tau]\times\mathbb{R}^d\times \mathbb{R}^d\rightarrow \mathbb{R}^{d\times m}$ and both continuous and Borel measurable =. Suppose the initial data $X(0) = \xi = \{\xi(0):~-\tau\leq \theta\leq 0\}$, which is $\mathcal{F}_0$ - measurable $C([-\tau,0],\mathbb{R}^d) -$ valued random variable such that $\mathbb{E}||\xi||^2<\infty$.\\
+We impose the following condition:
+\end{frame}
+\begin{frame}[allowframebreaks]{Stochastic Differential Delay Equation Case}
+($A1^\prime$): Non-Lipschitz condition: For any $x,\hat{x},y,\hat{y}\in\mathbb{R}^d$ and $t\in[0,T]$,
+
+$$
+\bigg|f(t,x,y) - f(t,\hat{x},\hat{y})\bigg|^2v\bigg|g(t,x,y) - g(t,\hat{x},\hat{y})\bigg|^2\leq k\bigg(\bigg|x-\hat{x}\bigg|^2+k\bigg|y-\hat{y}\bigg|^2,\bigg)
+$$
+where $k$ is a positive constant and $k(\cdot)$ is a continuous increasing concave function from $\mathbb{R}^+$ to $\mathbb{R}^+$ such that $k(0) = 0, ~k(x)>0$ for $x>0$ and 
+$$
+\int_{0+}\frac{dx}{k(x)} = \infty.
+$$
+Under the condition $(A1^\prime)$, \eqref{3.1.5} has a unique solution for $t\in[0,T]$\\
+Consider the Standard form of SDE in $\mathbb{R}^d$
+\begin{equation}\label{3.1.6}
+\begin{split}
+X_\varepsilon(t) & = X(0)+\varepsilon\int_0^tf(s,X_\varepsilon(s),X_\varepsilon(s-\tau))ds&\\
+&+\sqrt{\varepsilon}\int_0^tg(S,X_\varepsilon(s),X_\varepsilon(s-\tau))dB(s)
+\end{split}
+\end{equation}
+Where $X(0)$ and the coefficient have the same conditions as in \eqref{3.1.5} and $\varepsilon\in\{0,\varepsilon_0\}$ is a positive small parameter with $\varepsilon$ a fixed number. Obviously, \eqref{3.1.6} also has a unique solution $X_\varepsilon(t),~t\in[0,T]$ for every fixed $\varepsilon\in(0,\varepsilon_0$.\\
+\par Define $\bar{f}(x,y):\mathbb{R}^d\times \mathbb{R}^d\rightarrow \mathbb{R}^d,~\bar{g}(x,y):\mathbb{R}^d\times\mathbb{R}^d\rightarrow R^{d\times m}$ to be measurable functions, simplifying the condition $A1^\prime$. Moreover, we assume that the following inequalities are satisfied\\\\
+$(A2^\prime)$
+
+\begin{equation}\label{3.1.7}
+\frac{1}{\tau_1}\int_0^{\tau_1}|f(s,x,y) - \bar{f}(x,y)|ds\leq \psi_3(\tau_1)(1+|x|+|y|)
+\end{equation}
+$A3^\prime$
+
+\begin{equation}\label{3.1.8}
+\frac{1}{\tau_1}\int_0^{\tau_1}|g(s,x,y) - \bar{g}(x,y)|^2ds\leq \psi_4(\tau_1)(1+|x|^2+|y|^2)
+\end{equation}
+where $\psi_i(T_1),~i = 3,4$ are positive bounded functions with 
+$$
+\lim_{T\rightarrow \infty}\psi_i(\tau_1)   = 0
+$$
+The average form of \eqref{3.1.6} is 
+\begin{equation}\label{3.1.9}
+Z_\varepsilon(t) - X(0)+\varepsilon\int_0^t\bar{f}(Z_\varepsilon(t),Z_\varepsilon(s-\tau))ds+\sqrt{\varepsilon}\int_0^t\bar{g}(Z_\varepsilon(s),Z_\varepsilon(s-\xi))dB(s)
+\end{equation}
+Obviously \eqref{3.1.9} also has a unique solution $Z_\varepsilon(t)$ under similar conditions as \eqref{3.1.6} for the solution $X_\varepsilon(t)$.
+\end{frame}
+
+\section{RESULTS AND DISCUSSION}
+\begin{frame}[allowframebreaks]{RESULTS AND DISCUSSION}
+\par The Caroth`eodory approximation scheme was introduced by the Greek mathematician named Caratheodory Constentine in the early part of 20th century for ordinary differential equation. The solutions of stochastic differential equation do not have explicit expressions except the linear SDEs. We therefore look for the approximate solutions instead of the exact ones such as Picard iterative approximate solutions etc. Practically to compute $X^k(t)$ by the Picard aproximation, one need to compute $X^0(t), X^{1}(t),\ldots,X^{k-1}(t)$, which involve a lot of calculations on It$\hat{\mbox{o}}$'s integral. The Carotheodory approximation directly compute $X^k(t)$ and do not need the above mentioned stepwise iteration. In this project work, the Caratheodory approximation is used to obtain the exostence and uniqueness of solutions o SDEs. Then we prove the approximation theorem of solutions as an averaging principle of SFDE \eqref{1.1} with non-lipschitz coefficient.
+%\newpage
+\par Throughout this chapter, the letter $K$ or $C$ with or without indexes will refer to positive constants whose values may change in different occassions.\\
+\par We give some notations, definitions and two assumptions to guarantee the existence of the unique solution of equation \eqref{1.1}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{definition}\label{d2.1}
+\normalfont
+For any $\alpha\in(0,1)$ and a function $f\in L^1[[0,T];\mathbb{R}^d]$, the Riemann -Liouvile fractional integral operator of order $\alpha$ is defined for all $0<t<T$ by 
+$$
+I^\alpha f(t) = \frac{1}{\Gamma(\alpha)}\int_0^t(t-s)^{\alpha-1}f(s)ds,~~t>0,
+$$
+where $\Gamma(\alpha) = \int_0^\infty r^{\alpha-1}e^{-r}dr$ is the Gamma function and $L^1[0, T ]$ is the space of summable or integrable functions in a finite interval $[0,T]$ of the real line $\mathbb{R}$.
+\end{definition}
+The following lemma defines the integration with respect to $(dt)^\alpha$.
+
+\begin{lemma}\label{l2.1}
+Let $g(t)$ be a continyous function, then its integration with respect to $(dt)^\alpha,~0<\alpha\leq 1$ is defined by
+$$
+\int_0^tg(s)(ds)^\alpha = \alpha\int_0^t(t-s)^{\alpha - 1}g(s)ds,~~0<\alpha\leq 1.
+$$
+\end{lemma}
+\begin{definition}\label{d2.2}
+%\end{definition}
+\normalfont
+An $\mathbb{R}^d$-value stochastic process $\{x(t)\}_{0\leq t\leq T}$ is called a unique solution to equation \eqref{1.1} if it has the following properties:
+\end{definition}
+\begin{enumerate}
+\item[(i)] $\{x(t)\}$ is $t$-continuous and $\mathcal{F}_t$ adapted:
+\item[(ii)] $\{b(t,x(t))\},~\{\sigma_2(t,x(t))\}\in\mathcal{L}^1([0,T];\mathbb{R}^d)$ and $\{\sigma_1(t,x(t))\}\in\mathcal{L}^2([0,T];\mathbb{R}^{d\times m})$;
+\item[(iii)] For all $t\in[0,T]$, and $x$ a.s.
+\begin{equation}\label{2.1}
+\begin{split}
+X(t) &= X_0+\int_0^tb(s,X(s))ds+\int_0^t\sigma_1(s,X(s))dW(s)\\
+&+\alpha\int_0^t\frac{\sigma_2(s,X(s))}{(t-s)^{1-\alpha}}
+\end{split}
+\end{equation}
+\item[(iv)] For any other solution $\hat{x}(t)$, we have $P\{x(t) = \hat{x}(t),~~\forall~0\leq t\leq T\} = 1.$
+\end{enumerate}
+%\end{definition}
+
+
+
+In order to attain the solution of Equation \eqref{1.1}, we impose the following two hypotheses.
+
+\begin{hypothesis}[\textbf{Non-Lipschitz Condition}]\label{hypo1}
+\normalfont
+There exists a function $G(t,v) : [0,+\infty)\times \mathbb{R}\rightarrow\mathbb{R}^+$ such that 
+\end{hypothesis}
+\begin{enumerate}
+\item[(a)] For any fixed $v\geq 0,~t\in[0,+\infty)\mapsto G(t,v)\in\mathbb{R}^+$ is locally integrable, and for any fixed $t\geq 0,v\in\mathbb{R}^+\mapsto G(t,v)\in\mathbb{R}^+$ is continuous, non-descreasing, concave, and satisfy $G(t,0) = 0$ and for any fixed $t$, $\int_{0+}\frac{1}{G(t,v)}dv = +\infty.$ 
+\item[(b)] For any fixed $t\geq 0$ and $X,Y\in\mathbb{R}^d$, the following inequality holds:
+$$
+|b(t,X) - b(t,Y)|^2 + |\sigma_1(t,X) - \sigma_1(t,Y)|^2+|\sigma_2(t,X) - \sigma_2(t,Y)|^2\leq  G(t,|X-Y|^2).
+$$
+\item[(c)] For every $t\in\mathbb{R}^+$ and any non-negative function $Z(t)$ such that
+$$
+Z(t)\leq K\int_0^t G(s,Z(s))ds,
+$$
+where $K>0$ is a constant, we have $Z(t)\equiv 0$.
+\end{enumerate}
+%\end{hypothesis}
+
+\begin{hypothesis}\label{hypo2}
+Let $b(t,0),\sigma_1(t,0), \sigma_2(t,0)\in L^2([0,T])$ and for all $t\in[0,T]$ it follows that
+$$
+|b(t,0)|^2+|\sigma_1(t,0)|^2+|\sigma_2(t,0)|^2\leq \bar{K}
+$$
+where $\bar{K}>0$ is a constant.
+\end{hypothesis}
+\end{frame}
+\subsection{Existence and Uniqueness of Solutions to SFDEs}
+\begin{frame}[allowframebreaks]{Existence and Uniqueness of Solutions to SFDEs}
+\par Let us define the Carath$\acute{\mbox{e}}$odory approximation as follows.\\
+For any integer $n\geq 1$, define $X_n(t) = X(0) = X_0$ for all $-1\leq t\leq 0$ and 
+
+\begin{equation}\label{3.1}
+\begin{split}
+X_n(t) &= X_0+\int_0^t b\bigg(s,X_n\bigg(s-\frac{1}{n}\bigg)\bigg)ds+ \int_0^t\sigma_1\bigg(s,X_n\bigg(s-\frac{1}{n}\bigg)\bigg)dW(s)\\
+&+\alpha\int_0^t\frac{\sigma_2(s,X_n(s-\frac{1}{2}))}{(t-s)^{l-\alpha}}ds,~~0\leq t\leq T.
+\end{split}
+\end{equation}
+\begin{theorem}\label{3.1}
+Under the  Hypotheses \ref{hypo1} - \ref{hypo2}, there exists a unique solution $X(t)$ to SFDEs \eqref{1.1}
+\end{theorem}
+\end{frame}
+
+\subsection{Approximation Theorem for Solutions of SFDEs}
+\begin{frame}[allowframebreaks]{Approximation Theorem for Solutions of SFDEs}
+\noindent
+\par The standard form of Eq. \eqref{1.1} is 
+\begin{equation}\label{4.1}
+\begin{split}
+X_\epsilon(t)& = X_0+\epsilon\int_0^tb(s,X_\epsilon(s))ds+\sqrt{\epsilon}\int_0^t\sigma_1(s,X_\epsilon(s))dW(s)\\
+&+\epsilon\alpha\int_0^t\frac{\sigma_2(s,X_\epsilon(s))}{(t-s)^{1-\alpha}}
+\end{split}
+\end{equation}
+where $X_0$ is a given $\mathbb{R}^d$-value random variable as the initial condition, the coefficients
+satisfy Hypotheses \ref{hypo1}-\ref{hypo2}, and $\epsilon\in(0,\epsilon_0]$ is a positive small parameter with $\epsilon_0\in(0,\frac{1}{2})$ 
+a fixed number.\\
+\par According to Theorem \ref{3.1}, Eq. \eqref{4.1} also has a unique strong solution $X_\epsilon(t)$,
+$t \in [0,T]$ for every $\epsilon\in (0, \epsilon_0]$. We will examine whether the solution process $X_\epsilon(t)$ can be approximated to the solution process $Y_\epsilon(t)$ of the simplified equation
+
+\begin{equation}\label{4.2}
+\begin{split}
+Y_\epsilon(t)& = X_0 +\varepsilon\int_0^t\bar{b}(Y_\epsilon(S))ds +\sqrt{\epsilon}\int_0^t\bar{\sigma}_1(Y_\epsilon(s))dW(s)\\
+&+\epsilon\alpha\int_0^t \frac{\bar{\sigma}_2(Y_\epsilon(s))}{(t-s)^{1-\alpha}}ds,~~t\in[0,T].
+\end{split}
+\end{equation}
+where $\bar{b},\bar{\sigma}_1,\bar{\sigma}_2:\mathbb{R}^d\rightarrow\mathbb{R}^d$ be measurable functions satisfy Hypotheses \ref{hypo1} - \ref{hypo3}, Moreover, we assume that the inequalities defined in Hypothesis \ref{hypo3} are satisfied. 
+
+\begin{hypothesis}\label{hypo3}
+\normalfont
+For any $T_1\in[0,T]$, we have
+\begin{enumerate}
+\item[(i)]
+$$
+\frac{1}{T_1}\int_0^{T_1}|b(s,x) - \bar{b}(x)|^2ds\leq \psi_1(T_1)k(|x|^2),
+$$
+\item[(ii)]
+$$
+\frac{1}{T_1}\int_0^{T_1}|\sigma_1(s,x) - \bar{\sigma}_1(x)|^2ds\leq \psi_2(T_1)k(|x|^2),
+$$
+\item[(iii)]
+$$
+\frac{1}{T_1}\int_0^{T_1}|\sigma_2(s,x) - \bar{\sigma}_2(x)|^2ds\leq \psi_3(T_1)k(|x|^2),
+$$
+\end{enumerate}
+\end{hypothesis}
+where $\psi_i(T_1)$ are bounded positive functions with $\lim_{T_1\rightarrow\infty}~\psi_i(T_1)~ = ~ 0,~i = 1,2,3$ and $k(\cdot):\mathbb{R}^+\rightarrow\mathbb{R}^+$ is continuous nondecreasing concave function.
+%\end{hypothesis}
+\noindent
+\par We concern the relationship between the solution processes $X_\epsilon(t)$ and $Y_\epsilon(t)$.\\
+Both convergence in mean square and probability will be taken into consideration.
+Now, we claim the following two results.
+\begin{theorem}\label{4.1}
+Assume that the original and simplified SFDEs \eqref{4.1}-\eqref{4.2} both satisfy the Hypotheses \ref{hypo1}-\ref{hypo3}. For a given arbitrarily small number $\delta_1>0$, there exist $L>0,~\beta\in(0,1)$ and $\epsilon_1\in (0,\epsilon_0]$ such that for all $\epsilon\in(0,\epsilon_1]$,
+$$
+\bigg(\sup_{t\in[0,L\epsilon^{\frac{1}{2} -\beta}(1-2\epsilon)]}|X_\epsilon(t) - Y_\epsilon(t)|^2\bigg)\leq \delta_1.
+$$
+\end{theorem}
+\end{frame}
+\section{SUMMARY AND CONCLUSION}
+
+\begin{frame}{SUMMARY AND CONCLUSION}
+\noindent
+\par In this project work, we treated two issues. First, the existence and uniqueness of strong solutions to SFDE's discussed under non-Lipchitz and weakened linear growth condition and this is obtained by Caroth`eodory approximation than an averaging principle for the solutions of SFDE's has proved.
+\par This work has considered the connections between the solutions of a standard form and the solutions of averaged systms and prived that under some conditions the solutions of original system in mean square and probability.\\
+
+\par Moreover, a numerical simulation was carried out to show the agreement between the solutions of the original and the simpliied SFDEs.
+
+
+
+
+
+
+
+
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}[allowframebreaks]{REFERENCES}
+\bibliography{Oluchi799}
+\nocite{*}
+\bibliographystyle{apacite}
+\end{frame}
+\begin{frame}
+   \begin{figure}[hp]
+	\centering
+		\includegraphics[width=1.00\textwidth]{image2.jpg}
+\end{figure}
+\end{frame}
+
+\end{document}
